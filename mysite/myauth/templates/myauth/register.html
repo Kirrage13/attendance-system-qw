@@ -1,0 +1,18 @@
+{% extends "myauth/base.html" %}
+
+{% block title %}Choose Role{% endblock %}
+
+{% block body %}
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 shadow" style="min-width: 400px;">
+      <h2 class="text-center mb-3">Choose your role</h2>
+      <form method="post">
+        {% csrf_token %}
+        <div class="text-center">
+          <a href="{% url 'myauth:student' %}" class="btn btn-primary w-100 mb-2">Register as Student</a>
+          <a href="{% url 'myauth:teacher' %}" class="btn btn-primary w-100">Register as Teacher</a>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

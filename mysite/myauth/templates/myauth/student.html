@@ -1,0 +1,16 @@
+{% extends "myauth/base.html" %}
+
+{% block title %}Register as Student{% endblock %}
+
+{% block body %}
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 shadow" style="min-width: 400px;">
+        <h2 class="text-center mb-3">Student Registration</h2>
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary w-100">Register</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

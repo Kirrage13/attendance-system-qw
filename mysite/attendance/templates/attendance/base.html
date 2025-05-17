@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Lecture attendance system{% endblock %}</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 200px;
+            background: #f0f0f0;
+            padding: 10px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Greetings, {{ user.first_name }}!</h2>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            {% block sidebar %}{% endblock %}
+        </div>
+
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+
+
+    </div>
+</body>
+</html>
